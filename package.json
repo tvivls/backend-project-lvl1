@@ -18,5 +18,8 @@
   "homepage": "https://github.com/tvivls/backend-project-lvl1#readme",
   "dependencies": {
     "lodash": "^4.17.21"
+  },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
   }
 }
