@@ -39,6 +39,6 @@ const calculator = (name) => {
             return false;
         }
     }
-    console.log(`Congratulations, ${name}!`);
+    console.log('Congratulations', name, '!');
 };
 calculator(name);
