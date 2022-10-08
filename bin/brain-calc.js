@@ -35,7 +35,7 @@ const calculator = (name) => {
             let str = `'${answer}' is wrong answer ;(. Correct answer was ${rightAnsw}.`;
             console.log(str);
             console.log(`Let's try again, ${name}!`);
-            calculator(name);
+            return false;
         }
     }
     console.log(`Congratulations, ${name}!`);
