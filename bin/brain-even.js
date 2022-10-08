@@ -22,12 +22,14 @@ const isEvenNumber = (name) => {
             continue;
         }
         else {
-            let str = (answer !== rightAnsw[0]) ? `'${answer}' is wrong answer ;(. Correct answer was '${rightAnsw[0]}'.` : `'${$answer}' is wrong answer ;(. Correct answer was '${rightAnsw[1]}'.`;
+            let str = `'${answer}' is wrong answer ;(. Correct answer was `;
+            str += (answer !== rightAnsw[0]) ? `'${rightAnsw[0]}'.` : `'${rightAnsw[1]}'.`;
             console.log(str);
             console.log(`Let's try again, ${name}!`);
-            isEvenNumber();
+            isEvenNumber(name);
         }
     }
     console.log(`Congratulations, ${name}!`);
 }
 export default isEvenNumber;
+isEvenNumber(name);
