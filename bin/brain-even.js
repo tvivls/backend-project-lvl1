@@ -9,9 +9,9 @@ const name = greetingByName();
 const isEvenNumber = (name) => {
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
     let number, rightAnsw;
-    rightAnsw = (even) ? 'yes' : 'no';
     for (let i = 0; i < 3; i += 1) {
         number = getRandomInt(0, 100);
+        rightAnsw = (even(number)) ? 'yes' : 'no';
         console.log('Question:', number);
         let answer = readlineSync.question('Your answer(yes/no): ');
         if (answer === rightAnsw) {
