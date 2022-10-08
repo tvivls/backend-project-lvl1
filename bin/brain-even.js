@@ -26,7 +26,7 @@ const isEvenNumber = (name) => {
             str += (answer !== rightAnsw[0]) ? `'${rightAnsw[0]}'.` : `'${rightAnsw[1]}'.`;
             console.log(str);
             console.log(`Let's try again, ${name}!`);
-            isEvenNumber(name);
+            return false;
         }
     }
     console.log(`Congratulations, ${name}!`);
