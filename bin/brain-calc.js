@@ -15,7 +15,7 @@ const calculator = (name) => {
         number2 = getRandomInt(0, 50);
         numbOfOperator = getRandomInt(0, 3);
         
-        console.log('Question: ', number1, operator[numbOfOperator], number2);
+        console.log('Question:', number1, operator[numbOfOperator], number2);
         let answer = readlineSync.question('Your answer: ');
         switch(numbOfOperator){
             case 0:

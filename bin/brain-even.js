@@ -12,7 +12,7 @@ const isEvenNumber = (name) => {
     rightAnsw = (even) ? 'yes' : 'no';
     for (let i = 0; i < 3; i += 1) {
         number = getRandomInt(0, 100);
-        console.log('Question: ', number);
+        console.log('Question:', number);
         let answer = readlineSync.question('Your answer(yes/no): ');
         if (answer === rightAnsw) {
             console.log('Correct!');
