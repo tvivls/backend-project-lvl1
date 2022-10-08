@@ -21,7 +21,7 @@ const isEvenNumber = (name) => {
         else {
             let str = `'${answer}' is wrong answer ;(. Correct answer was '${rightAnsw}'.`;
             console.log(str);
-            console.log(`Let's try again, ${name}!`);
+            console.log('Let\'s try again', name, '!');
             return false;
         }
     }

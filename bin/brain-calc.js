@@ -35,7 +35,7 @@ const calculator = (name) => {
         if (rightAnsw !== Number(answer)) {
             let str = `'${answer}' is wrong answer ;(. Correct answer was ${rightAnsw}.`;
             console.log(str);
-            console.log(`Let's try again, ${name}!`);
+            console.log('Let\'s try again', name, '!');
             return false;
         }
     }
