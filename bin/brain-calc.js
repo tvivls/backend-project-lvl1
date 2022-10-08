@@ -10,8 +10,8 @@ const calculator = (name) => {
     let number1, number2, numbOfOperator, rightAnsw;
     const operator = ['+', '-', '*'];
     for (let i = 0; i < 3; i += 1) {
-        number1 = getRandomInt(0, 100);
-        number2 = getRandomInt(0, 100);
+        number1 = getRandomInt(0, 50);
+        number2 = getRandomInt(0, 50);
         numbOfOperator = getRandomInt(0, 3);
         
         console.log('Question: ', number1, operator[numbOfOperator], number2);
@@ -31,9 +31,8 @@ const calculator = (name) => {
             console.log('Correct!');
             continue;
         }
-        if (rightAnsw !== answer) {
-            let str = `'${answer}' is wrong answer ;(. Correct answer was `;
-            
+        if (rightAnsw !== Number(answer)) {
+            let str = `'${answer}' is wrong answer ;(. Correct answer was ${rightAnsw}.`;
             console.log(str);
             console.log(`Let's try again, ${name}!`);
             calculator(name);
