@@ -25,7 +25,7 @@ const isEvenNumber = (name) => {
             return false;
         }
     }
-    console.log('Congratulations', name, '!');
+    console.log('Congratulations,', name, '!');
 }
 export default isEvenNumber;
 isEvenNumber(name);
