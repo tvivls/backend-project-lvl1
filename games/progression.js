@@ -15,7 +15,7 @@ const arithmeticProgression = () => {
         rightAnsw = massProgr[missNumb];
         massProgr[missNumb] = '..';
         
-        console.log('Question:', String(massProgr));
+        console.log('Question:', String(massProgr.join(' ')));
         let answer = readlineSync.question('Your answer: ');
         if (checkAnswer(name, answer, rightAnsw) === false) return false;
     }
