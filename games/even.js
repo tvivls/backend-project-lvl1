@@ -1,7 +1,6 @@
 import readlineSync from 'readline-sync';
-import greetingByName from '../src/cli.js';
+import { greetingByName, getRandomInt, checkAnswer } from '../src/index.js';
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 const isEven = (number) => number % 2 === 0;
 const name = greetingByName();
 
@@ -13,16 +12,7 @@ const isEvenNumber = () => {
         rightAnsw = (isEven(number)) ? 'yes' : 'no';
         console.log('Question:', number);
         let answer = readlineSync.question('Your answer(yes/no): ');
-        if (answer === rightAnsw) {
-            console.log('Correct!');
-            continue;
-        }
-        else {
-            let str = `'${answer}' is wrong answer ;(. Correct answer was '${rightAnsw}'.`;
-            console.log(str);
-            console.log(`Let's try again, ${name}!`);
-            return false;
-        }
+        if (checkAnswer(name, answer, rightAnsw) === false) return false;
     }
     console.log(`Congratulations, ${name}!`);
 };

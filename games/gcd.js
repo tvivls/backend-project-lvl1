@@ -1,8 +1,7 @@
 import readlineSync from 'readline-sync';
-import greetingByName from '../src/cli.js';
+import { greetingByName, getRandomInt, checkAnswer } from '../src/index.js';
 
 const name = greetingByName();
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 const getGcd = () => {
     let number1, number2, rightAnsw;
@@ -13,18 +12,9 @@ const getGcd = () => {
         console.log('Question:', number1, number2);
         let answer = readlineSync.question('Your answer: ');
         rightAnsw = gcd(number1, number2);
-        if (rightAnsw === Number(answer)) {
-            console.log('Correct!');
-            continue;
-        }
-        if (rightAnsw !== Number(answer)) {
-            let str = `'${answer}' is wrong answer ;(. Correct answer was '${rightAnsw}'.`;
-            console.log(str);
-            console.log(`Let's try again, ${name}!`);
-            return false;
-        }
-
+        if (checkAnswer(name, answer, rightAnsw) === false) return false;
     }
+    console.log(`Congratulations, ${name}!`);
 };
 const gcd = (number1, number2) => {
     if ((typeof number1 !=='number') || (typeof number2 !=='number')) 
