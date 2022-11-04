@@ -1,3 +1,4 @@
+/* eslint-disable */
 import readlineSync from 'readline-sync';
 
 const greetingByName = () => {
