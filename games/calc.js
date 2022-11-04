@@ -5,7 +5,6 @@ import { greetingByName, getRandomInt, checkAnswer } from '../src/index.js';
 const name = greetingByName();
 
 const calculator = () => {
-
     console.log('What is the result of the expression?');
     let number1, number2, numbOfOperator, rightAnsw;
     const operator = ['+', '-', '*'];
